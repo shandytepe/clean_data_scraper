@@ -45,11 +45,25 @@ def rename_values(data):
         "ja": "yes"
     }
 
+    mapping_offer = {
+        "Angebot": "offer",
+        "Gesuch": "wanted"
+    }
+
+    mapping_seller = {
+        "privat": "private",
+        "gewerblich": "commercial"
+    }
+
     data["gearbox"] = data["gearbox"].replace(mapping_gearbox)
 
     data["fuel_type"] = data["fuel_type"].replace(mapping_fuel)
 
     data["not_repaired_damage"] = data["not_repaired_damage"].replace(mapping_damage)
+
+    data["offer_type"] = data["offer_type"].replace(mapping_offer)
+
+    data["seller"] = data["seller"].replace(mapping_seller)
 
     return data
 
