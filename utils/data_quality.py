@@ -2,6 +2,13 @@ from helper import read_data
 import argparse
 
 def check_data_quality(filename):
+    """
+    Function yang digunakan untuk melakukan check data quality
+
+    Parameters
+    ----------
+    filename (str): Nama file yang digunakan untuk melakukan proses check data quality
+    """
     # read data
     data = read_data(filename)
     
